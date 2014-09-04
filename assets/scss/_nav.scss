@@ -1,0 +1,63 @@
+//Nav
+
+.nav {
+	font-family: 'Source Sans Pro';
+	ul {
+		margin: 0 auto;
+		display: block;
+		margin-top: 40px;
+
+		@include breakpoint(mobile) {
+			display: none;
+		}
+		@include breakpoint(tablet) {
+			display: none;
+		}
+
+		li {
+			float: left;
+			clear:both;
+			display: block;
+
+			a {
+				color: #FFFFFF;
+				font-size: 1em;
+				text-decoration: none;
+				padding: 16px;
+				padding-left: 16px;
+				font-weight: 500;
+				display: block;
+
+				border-left: #999999 0px solid;
+
+				@include transition(all 0.3s ease-out);
+
+				&:visited {
+
+				}	
+
+				&:hover {
+					border-left: #FFFFFF 16px solid;
+					padding-left: 6px;
+					color: $blue;
+					background: rgba(255,255,255,0.9);
+					@include box-shadow(10px 10px 20px -5px rgba(50, 50, 50, 0.2));
+
+				}
+
+				&.active {
+					border-left: $blue 8px solid;
+					padding-left: 6px;
+					width: 100px;
+				}
+			}
+
+			&.spacer {
+				width: 40%;
+				height: 1px;
+			}
+		}
+
+	}
+}
+

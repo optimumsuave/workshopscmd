@@ -1,0 +1,72 @@
+//Header
+
+.logo {
+	
+	
+}
+
+
+
+
+.header {
+	min-height:190px;
+
+	@include breakpoint(mobile) {
+		min-height: 105px;
+	}
+
+	width: 100%;
+
+	.header-top {
+		height: 140px; 
+		background: rgba(0,0,0,0.8);
+		@include transition(all 2s ease-in-out);
+
+
+		@include breakpoint(mobile) {
+			height: 100px;
+		}
+		
+		img {
+			height: auto;
+			width: 200px;
+			display: block;
+			top: -80px;
+			position: relative;
+
+			margin: 0 auto;
+			@include transition(all 1s ease-in-out);
+			
+			&.open {
+				width: 300px;
+				margin: 0 auto;
+				top: 0px;
+			}
+
+			&.hidden {
+				top: -400px;
+				
+			}
+		}
+
+
+		&.open {
+			min-height: 500px;
+		}
+
+
+
+	}
+
+	.header-bottom {
+		background: $mustard;
+		height: 6px;
+		width: 0%;
+		
+
+		&.open {
+			width: 100%;
+			@include transition(all 2s ease-in-out);
+		}
+	}
+}
